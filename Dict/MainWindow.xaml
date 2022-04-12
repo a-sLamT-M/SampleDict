@@ -1,0 +1,59 @@
+﻿<fw:AcrylicWindow x:Class="Dict.MainWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:local="clr-namespace:Dict"
+                  xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+                  mc:Ignorable="d"
+                  Title="Dict" Height="170" Width="450" MinHeight="170" MinWidth="450" MaxHeight="170" MaxWidth="450"
+                  ResizeMode="NoResize"
+                  WindowStyle="ThreeDBorderWindow"
+                  Background="#202020"
+                  TintOpacity = "0.1"
+                  NoiseOpacity="0"
+                  AcrylicWindowStyle="NoIcon" FontStretch="Condensed">
+    <Grid Margin="0,0,0,1">
+        <Label x:Name="DomainLabel" Content="Dict" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Foreground="White" Width="427" Height="35" FontStretch="Normal" Visibility="Visible" FontWeight="Normal" VerticalContentAlignment="Center" Background="#FF303030" FontSize="15" />
+        <Grid Height="31" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,0,0,2">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Height="43" Width="165">
+                <Border x:Name="minTextBoxBorder" BorderThickness="1" HorizontalAlignment="Right" Height="6" Margin="0,30,0,0" VerticalAlignment="Top" Width="112" CornerRadius="1" RenderTransformOrigin="0.5,0.5">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF929292" Opacity="1" />
+                    </Border.Background>
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform AngleX="0.01" />
+                            <RotateTransform Angle="-179.924" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
+                <TextBox x:Name="minTextBox" HorizontalAlignment="Right" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="112" Foreground="White" Background="#FF373737"  BorderBrush="#202020" Height="22" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" MouseEnter="minTextBox_MouseEnter" />
+                <Label x:Name="minLabel" Content="Min" HorizontalAlignment="Left" VerticalAlignment="Center" Height="28" Background="#00000000" Foreground="White" VerticalContentAlignment="Center" FontWeight="Light" Width="52" FontSize="14" Margin="-3,0,0,0" />
+            </Grid>
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="42" Width="166" Margin="273,0,0,0">
+                <Border x:Name="MAXTextBoxBorder" BorderThickness="1" HorizontalAlignment="Right" Height="6" Margin="0,29,0,0" VerticalAlignment="Top" Width="112" CornerRadius="1" RenderTransformOrigin="0.5,0.5">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF929292" Opacity="1" />
+                    </Border.Background>
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform AngleX="0.01" />
+                            <RotateTransform Angle="-179.924" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
+                <TextBox x:Name="MAXTextBox" HorizontalAlignment="Right" TextWrapping="Wrap" Text="99" VerticalAlignment="Center" Width="112" Foreground="White" Background="#FF373737"  BorderBrush="#202020" Height="22" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" MouseEnter="MAXTextBox_OnMouseEnter" />
+                <Label x:Name="MAXLabel" Content="Max" HorizontalAlignment="Left" VerticalAlignment="Center" Height="28" Background="#00000000" Foreground="White" VerticalContentAlignment="Center" FontWeight="Light" Width="52" FontSize="14" AutomationProperties.IsRowHeader="True" />
+            </Grid>
+        </Grid>
+        <Grid VerticalAlignment="Top" Height="34" Margin="0,90,0,0">
+            <Button x:Name="GenButton" Content="Gen" HorizontalAlignment="Left" VerticalAlignment="Center" Height="34" Width="65"  Background="#303030" Style="{StaticResource ButtonRoundRevealStyle}" FontFamily="Microsoft YaHei Ui" FontWeight="Normal" FontStretch="UltraExpanded" FontStyle="Normal" FontSize="11.5" BorderBrush="#202020" Margin="375,0,0,0" Click="GenButton_Click" />
+            <TextBox x:Name="ResultTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="330" Foreground="White" Background="#FF373737"  BorderBrush="#202020" Height="34" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="10,0,0,0" IsReadOnly="True" MaxLength="2" AcceptsTab="True" />
+        </Grid>
+    </Grid>
+</fw:AcrylicWindow>
